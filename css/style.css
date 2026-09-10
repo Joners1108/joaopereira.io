@@ -15,9 +15,9 @@
   --text-dim:      #97a3b6;
   --text-faint:    #5f6b7d;
   --accent:        #38bdf8;
-  --accent-2:      #6366f1;
+  --accent-2:      #2563eb;
   --accent-soft:   rgba(56, 189, 248, 0.12);
-  --accent-glow:   rgba(56, 189, 248, 0.35);
+  --accent-glow:   rgba(37, 99, 235, 0.35);
   --shadow:        0 20px 50px -20px rgba(0, 0, 0, 0.6);
   --radius:        16px;
   --radius-sm:     10px;
@@ -38,7 +38,7 @@
   --text-dim:      #4a5670;
   --text-faint:    #8590a5;
   --accent:        #0284c7;
-  --accent-2:      #4f46e5;
+  --accent-2:      #1d4ed8;
   --accent-soft:   rgba(2, 132, 199, 0.1);
   --accent-glow:   rgba(2, 132, 199, 0.25);
   --shadow:        0 18px 44px -22px rgba(15, 23, 42, 0.28);
@@ -198,7 +198,9 @@ h1, h2, h3 { font-family: var(--font-head); line-height: 1.15; margin: 0; letter
 /* -------- Sections -------- */
 .section { padding: 96px 0; position: relative; }
 .section-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 44px; }
-.section-index { font-family: var(--font-mono); color: var(--accent); font-size: .95rem; font-weight: 600; }
+.section-title::before { content: ""; display: inline-block; width: 26px; height: 3px; border-radius: 2px;
+  background: var(--accent); margin-right: 14px; vertical-align: middle; }
+.section-index { display: none; }
 .section-title { font-size: clamp(1.7rem, 4vw, 2.5rem); }
 
 /* -------- Sobre -------- */
@@ -209,6 +211,12 @@ h1, h2, h3 { font-family: var(--font-head); line-height: 1.15; margin: 0; letter
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
   padding: 26px; box-shadow: var(--shadow);
 }
+.about-photo { position: relative; aspect-ratio: 1 / 1; border-radius: 14px; overflow: hidden;
+  margin-bottom: 20px; border: 1px solid var(--border); background: var(--surface-2); }
+.about-photo img { width: 100%; height: 100%; object-fit: cover; }
+.about-photo img.img-fallback { object-fit: contain; padding: 24px; font-size: .78rem;
+  font-family: var(--font-mono); color: var(--text-faint);
+  background: repeating-linear-gradient(45deg, var(--surface-2), var(--surface-2) 12px, var(--surface) 12px, var(--surface) 24px); }
 .about-card h3 { font-size: 1.05rem; margin-bottom: 16px; color: var(--accent); font-family: var(--font-mono); }
 .about-list li { display: flex; justify-content: space-between; gap: 12px; padding: 11px 0;
   border-bottom: 1px solid var(--border); font-size: .92rem; }
@@ -250,8 +258,11 @@ h1, h2, h3 { font-family: var(--font-head); line-height: 1.15; margin: 0; letter
 .skill-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
   padding: 24px; transition: transform .3s, border-color .3s, box-shadow .3s; }
 .skill-card:hover { transform: translateY(-4px); border-color: var(--accent); box-shadow: var(--shadow); }
-.skill-card h3 { font-size: 1.08rem; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
-.skill-ico { font-size: 1.2rem; }
+.skill-card h3 { font-size: 1.08rem; margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
+.skill-ico { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 10px;
+  background: var(--accent-soft); border: 1px solid var(--border); flex-shrink: 0; }
+.skill-ico svg { width: 20px; height: 20px; stroke: var(--accent); fill: none; stroke-width: 1.7;
+  stroke-linecap: round; stroke-linejoin: round; }
 .skill-card ul { display: flex; flex-wrap: wrap; gap: 8px; }
 .skill-card li { font-size: .82rem; color: var(--text-dim); padding: 6px 12px; border-radius: 8px;
   background: var(--surface-2); border: 1px solid var(--border); transition: .2s; }
@@ -270,6 +281,11 @@ h1, h2, h3 { font-family: var(--font-head); line-height: 1.15; margin: 0; letter
     repeating-linear-gradient(45deg, var(--surface-2), var(--surface-2) 12px, var(--surface) 12px, var(--surface) 24px);
   color: var(--text-faint); font-size: .8rem; font-family: var(--font-mono);
 }
+.project-mono { display: grid; place-items: center; background:
+  radial-gradient(circle at 50% 40%, var(--accent-soft), transparent 70%), var(--surface-2); }
+.mono-letter { font-family: var(--font-head); font-weight: 700; font-size: 4.5rem; line-height: 1;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text; background-clip: text; color: transparent; }
 .project-type { position: absolute; top: 12px; left: 12px; font-family: var(--font-mono);
   font-size: .72rem; padding: 5px 11px; border-radius: 999px; color: var(--text);
   background: color-mix(in srgb, var(--bg) 75%, transparent); border: 1px solid var(--border-strong);
@@ -281,6 +297,7 @@ h1, h2, h3 { font-family: var(--font-head); line-height: 1.15; margin: 0; letter
 .tech-list li { font-family: var(--font-mono); font-size: .74rem; color: var(--accent);
   padding: 4px 10px; border-radius: 6px; background: var(--accent-soft); }
 .project-links { display: flex; gap: 10px; flex-wrap: wrap; }
+[hidden] { display: none !important; }
 
 /* Homelab visual */
 .homelab-visual { display: grid; place-items: center; background:
