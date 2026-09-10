@@ -18,6 +18,8 @@
   <meta property="og:url" content="https://joners1108.github.io/joaopereira.io/" />
   <meta property="og:locale" content="pt_PT" />
   <meta property="og:image" content="https://joners1108.github.io/joaopereira.io/assets/images/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -48,7 +50,7 @@
     "telephone": "+351964895643",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Baguim do Monte",
+      "addressLocality": "Porto",
       "addressRegion": "Porto",
       "addressCountry": "PT"
     },
@@ -56,7 +58,7 @@
       "https://www.linkedin.com/in/jo%C3%A3o-pereira-34b82a3a9/",
       "https://github.com/Joners1108"
     ],
-    "knowsAbout": ["Suporte Técnico", "Hardware", "Servidores", "Redes", "Firewalls", "VPN", "Windows Server", "Ubuntu", "Microsoft Entra ID", "Microsoft 365", "Virtualização", "Proxmox", "Desenvolvimento Web", "C#", "PHP", "MySQL"]
+    "knowsAbout": ["Suporte Técnico", "Hardware", "Servidores", "Redes", "Firewalls", "VPN", "Windows Server", "Ubuntu", "Microsoft Entra ID", "Microsoft 365", "Virtualização", "Proxmox", "Desenvolvimento Web", "C#", "PHP", "MySQL", "React", "Docker", "REST API", "Inteligência Artificial"]
   }
   </script>
 </head>
@@ -161,7 +163,7 @@
             <h3>Num relance</h3>
             <ul class="about-list">
               <li><span>Função</span><strong>Técnico de IT</strong></li>
-              <li><span>Localização</span><strong>Baguim do Monte, Porto</strong></li>
+              <li><span>Localização</span><strong>Porto, Portugal</strong></li>
               <li><span>Formação</span><strong>Téc. Sistemas Informáticos</strong></li>
               <li><span>Foco</span><strong>Sistemas &amp; Infraestrutura</strong></li>
               <li><span>Também</span><strong>Desenvolvimento Web</strong></li>
@@ -343,7 +345,7 @@
           <!-- RetroVintagePT -->
           <article class="project-card reveal">
             <div class="project-media">
-              <img src="assets/images/projects/retrovintagept.png" alt="Logótipo do projecto RetroVintagePT" loading="lazy" onerror="this.classList.add('img-fallback');this.alt='[ADICIONAR IMAGEM] retrovintagept.png'" />
+              <img src="assets/images/projects/retrovintagept.png" alt="Logótipo do projecto RetroVintagePT" loading="lazy" />
               <span class="project-type">E-commerce / Web App</span>
             </div>
             <div class="project-body">
@@ -352,11 +354,6 @@
               <ul class="tech-list">
                 <li>PHP</li><li>MySQL</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Stripe</li>
               </ul>
-              <!-- TODO: adicionar links. Remove hidden quando tiveres URLs -->
-              <div class="project-links" hidden>
-                <a href="#" class="btn btn-sm btn-outline" aria-label="GitHub de RetroVintagePT">GitHub</a>
-                <a href="#" class="btn btn-sm btn-ghost" aria-label="Demo de RetroVintagePT">Demo</a>
-              </div>
             </div>
           </article>
 
@@ -368,22 +365,17 @@
             </div>
             <div class="project-body">
               <h3>Vincit</h3>
-              <p>Website de comércio electrónico desenvolvido para venda de roupa.</p>
+              <p>Loja online completa de roupa: catálogo com filtros, carrinho, checkout, contas de utilizador e painel de administração.</p>
               <ul class="tech-list">
-                <li>[ADICIONAR INFORMAÇÃO]</li>
+                <li>PHP 8</li><li>MySQL</li><li>JavaScript</li><li>Stripe</li><li>PayPal</li><li>Multibanco</li>
               </ul>
-              <!-- TODO: adicionar links. Remove hidden quando tiveres URLs -->
-              <div class="project-links" hidden>
-                <a href="#" class="btn btn-sm btn-outline" aria-label="GitHub de Vincit">GitHub</a>
-                <a href="#" class="btn btn-sm btn-ghost" aria-label="Demo de Vincit">Demo</a>
-              </div>
             </div>
           </article>
 
           <!-- SamScan -->
           <article class="project-card reveal">
             <div class="project-media">
-              <img src="assets/images/projects/samscan.png" alt="Interface da ferramenta SamScan" loading="lazy" onerror="this.classList.add('img-fallback');this.alt='[ADICIONAR IMAGEM] samscan.png'" />
+              <img src="assets/images/projects/samscan.png" alt="Interface da ferramenta SamScan" loading="lazy" />
               <span class="project-type">Windows Maintenance / Automation</span>
             </div>
             <div class="project-body">
@@ -392,9 +384,68 @@
               <ul class="tech-list">
                 <li>PowerShell</li><li>Batch</li><li>Windows</li>
               </ul>
-              <!-- TODO: adicionar link. Remove hidden quando tiveres URL -->
-              <div class="project-links" hidden>
-                <a href="#" class="btn btn-sm btn-outline" aria-label="GitHub de SamScan">GitHub</a>
+            </div>
+          </article>
+
+          <!-- SneakerHub AI -->
+          <article class="project-card reveal">
+            <div class="project-media project-mono" aria-hidden="true">
+              <span class="mono-letter">AI</span>
+              <span class="project-type">Automação / Inteligência Artificial</span>
+            </div>
+            <div class="project-body">
+              <h3>SneakerHub AI</h3>
+              <p>Sistema self-hosted para automatizar a venda de sapatilhas no Vinted, com recolha de dados e apoio de modelos de IA. Preparado para correr em Docker.</p>
+              <ul class="tech-list">
+                <li>PHP 8.2</li><li>Docker</li><li>IA (Gemini/Groq)</li><li>Guzzle</li><li>Composer</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Gestor de Tarefas -->
+          <article class="project-card reveal">
+            <div class="project-media project-mono" aria-hidden="true">
+              <span class="mono-letter">To</span>
+              <span class="project-type">Web App / REST API</span>
+            </div>
+            <div class="project-body">
+              <h3>Gestor de Tarefas</h3>
+              <p>Aplicação de gestão de tarefas com frontend em React e backend próprio em PHP, a comunicar por API REST.</p>
+              <ul class="tech-list">
+                <li>React 18</li><li>PHP 8</li><li>REST API</li><li>MySQL</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- CentroCloud -->
+          <article class="project-card reveal">
+            <div class="project-media project-mono" aria-hidden="true">
+              <span class="mono-letter">CC</span>
+              <span class="project-type">Cloud / File Sharing</span>
+            </div>
+            <div class="project-body">
+              <h3>CentroCloud</h3>
+              <p>Mini-cloud pessoal para partilha de ficheiros com chat integrado — upload, download e mensagens numa interface simples e responsiva.</p>
+              <ul class="tech-list">
+                <li>PHP</li><li>JavaScript</li><li>HTML</li><li>CSS</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Kobo Sender -->
+          <article class="project-card reveal">
+            <div class="project-media project-mono" aria-hidden="true">
+              <span class="mono-letter">K</span>
+              <span class="project-type">Web App / Utilitário</span>
+            </div>
+            <div class="project-body">
+              <h3>Kobo Sender</h3>
+              <p>Ferramenta web para enviar livros para o leitor Kobo, contornando as suas restrições. Emparelhamento simples por chave — feita em poucas horas para resolver um problema real.</p>
+              <ul class="tech-list">
+                <li>PHP</li><li>JavaScript</li><li>Web</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://kobo.gt.tc/" class="btn btn-sm btn-primary" target="_blank" rel="noopener" aria-label="Demo do Kobo Sender">Ver demo</a>
               </div>
             </div>
           </article>
@@ -422,9 +473,6 @@
                 <li>Proxmox</li><li>Home Assistant</li><li>Virtualização</li>
                 <li>Automação</li><li>Servidores</li><li>NAS</li><li>Redes</li>
               </ul>
-              <div class="project-links" hidden>
-                <span class="btn btn-sm btn-ghost" aria-hidden="true">[ADICIONAR IMAGEM]</span>
-              </div>
             </div>
           </article>
 
@@ -520,7 +568,7 @@
           <ul class="contact-info">
             <li><span>Email</span><a href="mailto:jpopereira9@gmail.com">jpopereira9@gmail.com</a></li>
             <li><span>Telefone</span><a href="tel:+351964895643">964 895 643</a></li>
-            <li><span>Localização</span>Baguim do Monte, Porto, Portugal</li>
+            <li><span>Localização</span>Porto, Portugal</li>
           </ul>
         </div>
       </div>
