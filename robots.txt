@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://joaopereira.io/sitemap.xml
+Sitemap: https://joners1108.github.io/joaopereira.io/sitemap.xml
