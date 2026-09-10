@@ -38,22 +38,6 @@ Sem build e sem `node_modules`.
 └── README.md
 ```
 
-## Como executar localmente
-
-Não precisa de build. Usa um servidor estático simples:
-
-```bash
-python -m http.server 8080
-```
-
-Depois abre `http://localhost:8080`.
-
-## Como publicar (GitHub Pages)
-
-1. Faz commit e push dos ficheiros para o branch `main`.
-2. No GitHub: **Settings → Pages → Source: Deploy from a branch**, branch `main`, pasta `/ (root)`.
-3. Aguarda alguns minutos. O site fica em https://joners1108.github.io/joaopereira.io/
-
 ## Secções
 
 Início · Sobre · Números · Experiência · Competências · Projectos · Formação ·
